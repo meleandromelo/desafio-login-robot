@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-05-08T16:40:36.726369" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\Robot Kickoff\Script Teste\Desafio_Gabriel\tests\login_tests.robot">
+<test id="s1-t1" name="TC01 - Login com sucesso" line="9">
+<kw name="Abrir navegador e acessar o site" owner="login_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:37.047850" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-08T16:40:37.047579" elapsed="3.296127"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-08T16:40:40.343979" elapsed="0.966299"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:37.046893" elapsed="4.263525"/>
+</kw>
+<kw name="Preencher username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:41.312963" level="INFO">Typing text 'student' into text field '//input[@name='username']'.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:41.312348" elapsed="1.557462"/>
+</kw>
+<arg>${USERNAME_VALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:40:41.311851" elapsed="1.558099"/>
+</kw>
+<kw name="Preencher password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:42.881254" level="INFO">Typing text 'Password123' into text field '//input[@name='password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:42.881025" elapsed="0.961461"/>
+</kw>
+<arg>${PASSWORD_VALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:40:42.880687" elapsed="0.961927"/>
+</kw>
+<kw name="Clicar em submit" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:43.843598" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:43.843363" elapsed="2.418303"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:43.843055" elapsed="2.418734"/>
+</kw>
+<kw name="Validar login com sucesso" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE_SUCCESS}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-08T16:40:46.270550" elapsed="0.156503"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:46.270230" elapsed="0.157041"/>
+</kw>
+<kw name="Fechar navegador" owner="login_page" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-08T16:40:46.429939" elapsed="2.562786"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:46.429637" elapsed="2.563303"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:37.046182" elapsed="11.950100"/>
+</test>
+<test id="s1-t2" name="TC02 - Login com username inválido" line="15">
+<kw name="Abrir navegador e acessar o site" owner="login_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:48.997864" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-08T16:40:48.997655" elapsed="4.977138"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-08T16:40:53.974987" elapsed="0.043274"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:48.997376" elapsed="5.021003"/>
+</kw>
+<kw name="Preencher username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:54.019384" level="INFO">Typing text 'invaliduser' into text field '//input[@name='username']'.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:54.019125" elapsed="0.131625"/>
+</kw>
+<arg>${USERNAME_INVALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:40:54.018740" elapsed="0.132147"/>
+</kw>
+<kw name="Preencher password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:54.154010" level="INFO">Typing text 'Password123' into text field '//input[@name='password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:54.153771" elapsed="0.129926"/>
+</kw>
+<arg>${PASSWORD_VALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:40:54.153421" elapsed="0.130387"/>
+</kw>
+<kw name="Clicar em submit" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:54.284562" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:54.284371" elapsed="0.085673"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:54.284117" elapsed="0.086035"/>
+</kw>
+<kw name="Validar erro de username" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE_USERNAME_ERROR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-08T16:40:54.370688" elapsed="0.035056"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:54.370428" elapsed="0.035593"/>
+</kw>
+<kw name="Fechar navegador" owner="login_page" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-08T16:40:54.406728" elapsed="2.227477"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:54.406422" elapsed="2.227940"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:48.996869" elapsed="7.637907"/>
+</test>
+<test id="s1-t3" name="TC03 - Login com password inválido" line="21">
+<kw name="Abrir navegador e acessar o site" owner="login_page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:56.637152" level="INFO">Opening browser 'chrome' to base url 'https://practicetestautomation.com/practice-test-login/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-08T16:40:56.636893" elapsed="3.248069"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-08T16:40:59.885165" elapsed="0.043764"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:56.636580" elapsed="3.292589"/>
+</kw>
+<kw name="Preencher username" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:40:59.930806" level="INFO">Typing text 'student' into text field '//input[@name='username']'.</msg>
+<arg>${INPUT_USERNAME}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:40:59.930410" elapsed="0.118554"/>
+</kw>
+<arg>${USERNAME_VALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:40:59.930011" elapsed="0.119087"/>
+</kw>
+<kw name="Preencher password" owner="login_page">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:41:00.049939" level="INFO">Typing text 'Password1234' into text field '//input[@name='password']'.</msg>
+<arg>${INPUT_PASSWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:41:00.049732" elapsed="0.077411"/>
+</kw>
+<arg>${PASSWORD_INVALIDO}</arg>
+<status status="PASS" start="2026-05-08T16:41:00.049395" elapsed="0.077860"/>
+</kw>
+<kw name="Clicar em submit" owner="login_page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-08T16:41:00.128509" level="INFO">Clicking element '//button[@id='submit']'.</msg>
+<arg>${BUTTON_SUBMIT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-08T16:41:00.128087" elapsed="0.082099"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:41:00.127648" elapsed="0.082657"/>
+</kw>
+<kw name="Validar erro de password" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MESSAGE_PASSWORD_ERROR}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-08T16:41:00.210922" elapsed="0.019169"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:41:00.210627" elapsed="0.019573"/>
+</kw>
+<kw name="Fechar navegador" owner="login_page" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-08T16:41:00.230814" elapsed="2.201719"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:41:00.230551" elapsed="2.202094"/>
+</kw>
+<status status="PASS" start="2026-05-08T16:40:56.636101" elapsed="5.796722"/>
+</test>
+<status status="PASS" start="2026-05-08T16:40:36.728204" elapsed="25.705526"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="3" fail="0" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
